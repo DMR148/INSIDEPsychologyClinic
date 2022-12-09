@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSIDE Psychology clinic</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src='https://kit.fontawesome.com/2ee0245f3d.js' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.6.1.min.js'></script>
+    <script src="responsiveslides.min.js"></script>
+    <script src="wow.min.js"></script>
+</head>
+<body>
+    <!--Modal Busqueda-->
+    <div class="modalBusqueda" id="modalBusqueda">
+        <div class="modalBusquedaCont">
+            <div class="mBC">
+                <h1>Search...</h1>
+            </div>
+            <div class="mBC">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="#" id="cerrarModalBusqueda">X</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Horario-->
+    <div class="modalHorario" id="modalHorario"></div>
+    <figure class="modalHorarioImg" id="modalHorarioImg">
+        <img src="imagenes/horario.png" alt="">
+        <div class="iconoCerrarHorario" id="cerrarModalHorario">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+    </figure>
+
+    <!--boton subir-->
+    <div class="subir" id="subir">
+        <i class="fa-solid fa-caret-up"></i>
+    </div>
+    <!--Cabecera desktop-->
+    <header class="ancho">
+        <div class="cabeceraInfo">
+            <p>2130 Fulton Street San Diego, CA</p>
+            <p>│</p>
+            <p>Weekdays and Weekends: 8:00–19:30</p>
+        </div>
+        <div class="buscar">
+            <p>Search</p>
+            <figure id="buscar">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </figure>
+        </div>
+    </header>
+
+    <!--Menu movil-->
+    <div class="menuMovil">
+        <div class="contMenuM">
+            <figure class="iconoM" id="sandwich">
+                <i class="fa-solid fa-bars"></i>
+            </figure>
+            <figure class="logoM">
+                <img src="imagenes/logo.png" alt="">
+            </figure>
+        </div>
+        <div class="contMenuM">
+            <figure>
+                <i class="fa-solid fa-magnifying-glass" id="iconoSearchM"></i>
+            </figure>
+            <figure>
+                <i class="fa-solid fa-ellipsis-vertical" id="iconoInfoM"></i>
+            </figure>
+            <div class="searchM" id="searchM">
+                <a href="#">Search...</a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="infoM" id="infoM">
+                <div class="cabeceraInfo">
+                    <p>2130 Fulton Street San Diego, CA</p>
+                    <p>Weekdays and Weekends: 8:00–19:30</p>
+                    <div class="numberM">
+                        <figure>
+                            <i class="fa-solid fa-phone"></i>
+                        </figure>
+                        <a href="#" class="number">1-800-700-6200</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="desplegarMenuM" id="menuIzq">
+        <a href="#" style="background-color: #1ec2b4; color: white;">Home</a>
+        <a href="#about" class="btn_ancla">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="singleservice.html">Sigle Service</a>
+        <a href="#departamentos" class="btn_ancla">Departments</a>
+        <a href="#doctores" class="btn_ancla">Our Doctors</a>
+        <a href="#testi" class="btn_ancla">Testimonials</a>
+    </div>
+
+    <!--Menu desktop-->
+    <nav class="ancho">
+        <figure>
+            <a href="#"><img src="imagenes/logo.png" alt=""></a>
+        </figure>
+        <div class="menu">
+            <a href="#" class="home btn_ancla">Home</a>
+            <a href="#about" class="botones btn_ancla">About Us</a>
+            <a href="#" class="botones" id="desplegar2">Services <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#departamentos" class="botones btn_ancla">Departments</a>
+            <a href="#" class="botones" id="desplegar1">Pages <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#doctores" class="botones btn_ancla">Our Doctors</a>
+            <a href="#testi" class="botones btn_ancla">Testimonials</a>
+            <figure class="phone">
+                <i class="fa-solid fa-phone"></i>
+            </figure>
+            <a href="#" class="number">1-800-700-6200</a>
+            <div class="pages" id="pages">
+                <div class="listas">
+                    <h3>PAGES 1</h3>
+                    <p>Our Doctors</p>
+                    <p>Doctor Profile</p>
+                    <p>News</p>
+                    <p>News Page</p>
+                    <p>Careers</p>
+                    <p>Clients</p>
+                </div>
+                <div class="listas">
+                    <h3>PAGES 1</h3>
+                    <p>Our Doctors</p>
+                    <p>Doctor Profile</p>
+                    <p>News</p>
+                    <p>News Page</p>
+                    <p>Careers</p>
+                    <p>Clients</p>
+                </div>
+                <div class="listas">
+                    <h3>PAGES 1</h3>
+                    <p>Our Doctors</p>
+                    <p>Doctor Profile</p>
+                    <p>News</p>
+                    <p>News Page</p>
+                    <p>Careers</p>
+                    <p>Clients</p>
+                </div>
+            </div>
+            <div class="services" id="services">
+                <a href="services.html"><p>> All Services</p></a>
+                <a href="singleservice.html"><p>> Single Service</p></a>
+            </div>
+        </div>
+    </nav>
+    <div class="ancho">
+        <hr>
+    </div>
+
+    <!--slide de fotos-->
+    <section class="slide ancho">
+        <div class="redes">
+            <div class="lineaVertical"></div>
+            <figure>
+                <i class="fa-brands fa-facebook-f"></i>
+            </figure>
+            <figure>
+                <i class="fa-brands fa-twitter"></i>
+            </figure>
+            <figure>
+                <i class="fa-brands fa-google-plus-g"></i>
+            </figure>
+        </div>
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider4">
+                <li>
+                    <img src="imagenes/slide1.jpg" alt="" class="imgD">
+                    <img src="imagenes/slide1Movil.jpg" alt="" class="imgM">
+                    <div class="contSlide">
+                        <p class="wow animate__animated animate__bounceInUp">We provide high-quality mental counseling services</p>
+                        <h1 class="wow animate__animated animate__bounceInUp">Mental Health Care</h1>
+                        <a href="#" class="wow animate__animated animate__bounceInUp">MAKE AN APPOINTMENT</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="imagenes/slide2.jpg" alt="" class="imgD">
+                    <img src="imagenes/slide2Movil.jpg" alt="" class="imgM">
+                    <div class="contSlide">
+                        <p class="wow animate__animated animate__bounceInUp">Offering professional psychological help</p>
+                        <h1 class="wow animate__animated animate__bounceInUp">Group Therapy</h1>
+                        <a href="#" class="wow animate__animated animate__bounceInUp">MAKE AN APPOINTMENT</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="imagenes/slide3.jpg" alt="" class="imgD">
+                    <img src="imagenes/slide3Movil.jpg" alt="" class="imgM">
+                    <div class="contSlide">
+                        <p class="wow animate__animated animate__bounceInUp">Unique cognitive-behavioral approach</p>
+                        <h1 class="wow animate__animated animate__bounceInUp">Quality Counseling</h1>
+                        <a href="#" class="wow animate__animated animate__bounceInUp">MAKE AN APPOINTMENT</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="numerosSlide">
+            <p>01</p>
+            <p>02</p>
+            <p>03</p>
+        </div>
+    </section>
+    
+    <!--seccion de articles de modal y mini formulario-->
+    <section class="tresCajas ancho">
+        <div class="tresCajasCont wow animate__animated animate__swing">
+            <h1>Opening Hours</h1>
+            <div class="horario">
+                <p>Weekdays</p>
+                <p style="color: lightgray;">8.00 - 17.00</p>
+            </div>
+            <div class="horario">
+                <p>Saturday</p>
+                <p style="color: lightgray;">9.30 - 17.30</p>
+            </div>
+            <div class="horario">
+                <p class="dia">Sunday</p>
+                <p style="color: lightgray;">9.30 - 15.00</p>
+            </div>
+        </div>
+        <div class="tresCajasCont wow animate__animated animate__wobble">
+            <h1>Doctors' Timetable</h1>
+            <p class="dif">View a timetable showing when our doctors are usually available.</p>
+            <a href="#" id="imgHorario">VIEW TIMETABLE</a>
+        </div>
+        <div class="tresCajasCont wow animate__animated animate__heartBeat">
+            <h1>Make An Appointment</h1>
+            <form action="">
+                <select required>
+                    <option value="" selected>Select Date</option>
+                    <option value="">May 1</option>
+                    <option value="">June 25</option>
+                    <option value="">July 17</option>
+                    <option value="">August 29</option>
+                    <option value="">September 3</option>
+                </select>
+                <input type="phone" placeholder="Phone"  required>
+                <input type="email" placeholder="Email" required>
+                <input type="submit" value="MAKE AN APPOINTMENT">
+            </form>
+        </div>
+    </section>
+
+    <!--video responsive-->
+    <section class="videoResponsive ancho">
+        <article class="contVideo">
+            <div class="contenedoryoutube">
+                <iframe src="https://www.youtube.com/embed/jiCU7rgLOkY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </article>
+        <article class="contRes" id="about">
+            <h1>About Our clinic</h1>
+            <p>Inside is a centrally located San Diego-based psychology practice providing therapeutic and counseling services. Our psychologists are highly trained and well-qualified to provide highly effective therapy.</p>
+            <div class="textosvideo">
+                <div>
+                    <div class="iconosvideo">
+                        <figure>
+                            <img src="imagenes/icono1.png" alt="">
+                        </figure>
+                        <div class="txt">
+                            <h3>Qualified Doctors</h3>
+                            <p>25 years of experience</p>
+                        </div>
+                    </div>
+                    <div class="iconosvideo">
+                        <figure>
+                            <img src="imagenes/icono3.png" alt="">
+                        </figure>
+                        <div class="txt">
+                            <h3>Couples Counseling</h3>
+                            <p>Mental help for families</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="iconosvideo">
+                        <figure>
+                            <img src="imagenes/icono2.png" alt="">
+                        </figure>
+                        <div class="txt">
+                            <h3>Individual Counseling</h3>
+                            <p>Professional psychotherapy</p>
+                        </div>
+                    </div>
+                    <div class="iconosvideo">
+                        <figure>
+                            <img src="imagenes/icono4.png" alt="">
+                        </figure>
+                        <div class="txt">
+                            <h3>Referring Therapists</h3>
+                            <p>Experts you can trust</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!--seccion de cuadros con animacion y formas-->
+    <section class="cuadritos ancho" id="departamentos">
+        <h1 class="tituloC">Departments</h1>
+        <hr>
+        <div  class="cuadritosCont">
+            <div class="cuadritosContTxt wow animate__animated animate__swing">
+                <div class="cuadrosUp"></div>
+                <div class="cuadros1">
+                    <figure>
+                        <i class="fa-solid fa-brain"></i>
+                    </figure>
+                    <h1>Neuropsychology</h1>
+                </div>
+                <div class="cuadrosDown"></div>
+            </div>
+            <div class="cuadritosContTxt wow animate__animated animate__swing">
+                <div class="cuadrosUp"></div>
+                <div class="cuadros1">
+                    <figure>
+                        <i class="fa-solid fa-children"></i>
+                    </figure>
+                    <h1>Couples Therapy</h1>
+                </div>
+                <div class="cuadrosDown"></div>
+            </div>
+            <div class="cuadritosContTxt  wow animate__animated animate__swing">
+                <div class="cuadrosUp"></div>
+                <div class="cuadros1">
+                    <figure>
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </figure>
+                    <h1>Psychotherapy</h1>
+                </div>
+                <div class="cuadrosDown"></div>
+            </div>
+            <div class="cuadritosContTxt wow animate__animated animate__swing">
+                <div class="cuadrosUp"></div>
+                <div class="cuadros1">
+                    <figure>
+                        <i class="fa-solid fa-baby"></i>
+                    </figure>
+                    <h1>Child Psychologist</h1>
+                </div>
+                <div class="cuadrosDown"></div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+
+    <!--Doctores con transform-->
+    <section class="docs ancho">
+        <h1 class="tituloC" id="doctores">Our Doctors</h1>
+        <hr>
+        <div class="DocCont">
+            <div class="docgrande">
+                <figure>
+                    <img src="imagenes/doc1.jpg" alt="">
+                </figure>
+                <div class="docgrandeinfo">
+                    <span class="txtblue">Founder, Senior Psychologist</span>
+                    <h3>Dr. Richard Molloy</h3>
+                    <p>20 years of experience</p>
+                    <hr>
+                    <span class="txtphone"><i class="fa-solid fa-phone"></i> +1 (409) 987–5874</span>
+                    <i class="fa-solid fa-quote-left quotation"></i>
+                    <p style="font-style: italic;">I am a dedicated psychologist trained in individual and family psychotherapy as well as in other spheres of psychology.</p>
+                </div>
+            </div>
+            <div class="DocChiquitos">
+                <div class="chiquitos">
+                    <figure>
+                        <img src="imagenes/doc2.jpg" alt="">
+                    </figure>
+                    <div class="docchicoinfo">
+                        <span class="txtblue">Clinical Psychologist</span>
+                        <h3>Dr. Julia Jameson</h3>
+                        <p>9 years of experience</p>
+                        <hr>
+                        <span class="txtphone"><i class="fa-solid fa-phone"></i> +1 (409) 987–5874</span>
+                    </div>
+                </div>
+                <div class="chiquitos">
+                    <figure>
+                        <img src="imagenes/doc4.jpg" alt="">
+                    </figure>
+                    <div class="docchicoinfo">
+                        <span class="txtblue">Counseling Psychologist</span>
+                        <h3>Dr. Max Turner</h3>
+                        <p>10 years of experience</p>
+                        <hr>
+                        <span class="txtphone"><i class="fa-solid fa-phone"></i> +1 (409) 987–5874</span>
+                    </div>
+                </div>
+                <div class="chiquitos">
+                    <figure>
+                        <img src="imagenes/doc3.jpg" alt="">
+                    </figure>
+                    <div class="docchicoinfo">
+                        <span class="txtblue">Counseling Psychologist</span>
+                        <h3>Dr. Rodney Stratton</h3>
+                        <p>16 years of experience</p>
+                        <hr>
+                        <span class="txtphone"><i class="fa-solid fa-phone"></i> +1 (409) 987–5874</span>
+                    </div>
+                </div>
+                <div class="chiquitos">
+                    <figure>
+                        <img src="imagenes/doc5.jpg" alt="">
+                    </figure>
+                    <div class="docchicoinfo">
+                        <span class="txtblue">Child Psychologist</span>
+                        <h3>Dr. Amy Adams</h3>
+                        <p>6 years of experience</p>
+                        <hr>
+                        <span class="txtphone"><i class="fa-solid fa-phone"></i> +1 (409) 987–5874</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+
+    <!--seccion con filtros-->
+    <section class="filtros ancho" id="testi">
+        <div class="imagenTs">
+            <figure class="imgFiltro">
+                <img src="imagenes/testimonios1.jpg" alt="" class="gris">
+            </figure>
+            <div class="contTes">
+                <h1>Testimonials</h1>
+                <p>We’ve had a lot of financial troubles over the years; loss of physical health, job and bankruptcy. Your coaching gave us hope and a new sense of vision so we can create our lives together. Thank you for everything you’ve done for us!</p>
+                <div class="personaTes">
+                    <hr>
+                    <h3>Emily Watson</h3>
+                </div>
+                <div class="imgTes">
+                    <figure>
+                        <img src="imagenes/testimonios2.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="imagenes/testimonios3.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="imagenes/testimonios4.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="imagenes/testimonios5.jpg" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pie de pagina-->
+    <footer class="ancho">
+        <div class="contFooter">
+            <h1>CONTACT US</h1>
+            <hr>
+            <p><i class="fa-solid fa-phone"></i>+1 (409) 987–5874</p>
+            <p><i class="fa-solid fa-envelope"></i>info@demolink.org</p>
+        </div>
+        <div class="contFooter">
+            <h1>CLINIC ADDRESS</h1>
+            <hr>
+            <span class="gray"><i class="fa-solid fa-location-dot"></i>2130 Fulton Street San Diego, CA 94117-1080 USA</span>
+        </div>
+        <div class="contFooter">
+            <h1>OUR DEPARTMENTS</h1>
+            <hr>
+            <div class="footerDep">
+                <a href="#"><span class="azul">></span> About Us</a>
+                <a href="#"><span class="azul">></span> Our Services</a>
+                <a href="#"><span class="azul">></span> Our Doctors</a><br>
+                <a href="#"><span class="azul">></span> Timetable</a>
+                <a href="#"><span class="azul">></span> Testimonials</a>
+                <a href="#"><span class="azul">></span> Blog</a>
+            </div>
+        </div>
+    </footer>
+    <div class="redesiconoFooter ancho">
+        <p>Inside © 2022. Privacy Policy</p>
+        <div class="redesFooter">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google-plus-g"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+        </div>
+    </div>
+    <script src="funciones.js"></script>
+</body>
+</html>

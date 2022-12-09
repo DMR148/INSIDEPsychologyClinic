@@ -1,0 +1,1479 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: system-ui;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    position: relative;
+}
+.ancho {
+    max-width: 1200px;
+    margin: auto;
+}
+.subir{
+    position: fixed;
+    top: 85%;
+    left: 85%;
+    z-index: 3000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50px;
+    background: rgb(58,207,213);
+    background: linear-gradient(180deg, rgba(58,207,213,1) 0%, rgba(58,78,213,1) 100%);
+    cursor: pointer;
+}
+.subir i{
+    font-size: 20px;
+}
+.modalBusqueda{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 100000;
+    display: none;
+}
+.modalBusquedaCont{
+    width: 400px;
+    border-bottom: 2px white solid;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100001;
+}
+.mBC{
+    color: white;
+    display: flex;
+    gap: 15px;
+}
+.mBC a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.mBC i{
+    font-size: 25px;
+}
+.mBC i:hover{
+    color: #12b3f0;
+    transition: all 0.5s;
+}
+.mBC h1:hover{
+    color: #12b3f0;
+    transition: all 0.5s;
+}
+.mBC a:hover{
+    color: #12b3f0;
+    transition: all 0.5s;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    height: 60px;
+}
+.cabeceraInfo{
+    display: flex;
+}
+.buscar{
+    display: flex;
+    padding-right: 20px;
+}
+.buscar p{
+    color: gray;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.buscar i:hover{
+    color: #12b3f0;
+    transition: all 0.5s;
+}
+.cabeceraInfo p{
+    color: gray;
+    margin-right: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+    background-color: white;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.botones{
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0px 20px;
+    color: black;
+    font-weight: bold;
+}
+.home{
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0px 20px;
+    font-weight: bold;
+    color: #1ec2b4;
+}
+.botones:hover{
+    color: #1ec2b4;
+    transition: all 0.5s;
+}
+.number{
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0px 20px;
+    color: black;
+}
+.number:hover{
+    color: #1ec2b4;
+    transition: all 0.5s;
+}
+.botones i{
+    font-size: 12px;
+}
+.phone{
+    font-size: 20px;
+    color: #12b3f0;
+}
+hr{
+    opacity: 0.5;
+}
+.pages{
+    width: 1200px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 300%;
+    right: -11px;
+    display: none;
+    justify-content:space-between;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 100;
+}
+.abrirPages{
+    display: flex;
+    top: 160%;
+    right: -11px;
+    opacity: 1;
+}
+.listas{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.listas h3{
+    color: #12b3f0;
+    border-bottom: lightgray 1px solid;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.listas p:hover{
+    cursor: pointer;
+    color: #12b3f0;
+    transition: all 0.5s;
+    padding-left: 10px;
+}
+.services{
+    position: absolute;
+    top: 300%;
+    left: 215px;
+    background-color: white;
+    border-bottom: 3px #1ec2b4 solid;
+    background-color: white;
+    padding: 25px 150px 25px 10px;
+    color: lightgray;
+    -webkit-box-shadow: 0px 0px 3px 2px rgba(156,156,156,1);
+    -moz-box-shadow: 0px 0px 3px 2px rgba(156,156,156,1);
+    box-shadow: 0px 0px 3px 2px rgba(156,156,156,1);
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.services a{
+    text-decoration: none;
+    color: lightgray;
+}
+.services p:hover{
+    cursor: pointer;
+    color: #12b3f0;
+    transition: all 0.5s;
+    padding-left: 10px;
+}
+.abrirServices{
+    top: 100%;
+    left: 215px;
+    opacity: 1;
+}
+.menuMovil{
+    display: none;
+}
+.desplegarMenuM{
+    display: none;
+}
+.slide{
+    margin-top: 40px;
+    display: flex;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    width: 60px;
+}
+.redes figure{
+    width: 25px;
+    height: 25px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.redes figure:hover{
+    background-color: #1ec2b4;
+    color: white;
+}
+.lineaVertical{
+    height: 200px;
+    width: 2px;
+    background-color: lightgray;
+}
+.numerosSlide{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+}
+.numerosSlide p{
+    font-size: 26px;
+    color: lightgray;
+    border-bottom: 3px lightgray solid;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.numerosSlide p:hover{
+    color: #1ec2b4;
+    padding-right: 50px;
+    border-bottom: 3px #1ec2b4 solid;
+}
+.contSlide{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.contSlide p{
+    font-size: 25px;
+    border-left: 4px #1ec2b4 solid;
+    padding-left: 20px;
+}
+.contSlide h1{
+    font-size: 60px;
+}
+.contSlide a{
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    padding: 15px 30px;
+    border: 2px solid transparent;
+    -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+    width: 250px;
+}
+.contSlide a:hover{
+    background: rgb(58,207,213);
+    background: linear-gradient(180deg, rgba(58,207,213,1) 0%, rgba(58,78,213,1) 100%);
+    transition: all 0.5s;
+    color: white;
+}
+.rslides li .imgM{
+    display: none;
+}
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+.callbacks_container{
+    position: relative;
+}
+.callbacks_nav {
+    position: absolute;
+    top: 52%;
+    left: 0;
+    opacity: 1;
+    z-index: 10000;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 50px;
+    width: 30px;
+    background: transparent url("imagenes/flechas.png") no-repeat left top;
+    margin-top: -45px;
+}
+.callbacks_nav.next {
+    left: auto;
+    background-position: right top;
+    right: 0;
+}
+.slideMovil{
+    display: none;
+}
+.tresCajas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+.tresCajasCont{
+    border: 2px lightgray solid;
+    height: 350px;
+    padding: 20px;
+    padding-top: 100px;
+    position: relative;
+    text-align: center;
+}
+.tresCajasCont:hover{
+    color: white;
+    background-color: #1ec2b4;
+    transition: all 0.2s;
+}
+.tresCajasCont:hover h1{
+    border: 2px transparent solid;
+    padding-left: 50px;
+    transition: all 0.2s;
+}
+.tresCajasCont:hover p{
+    color: white;
+}
+.tresCajasCont h1{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border: 2px white solid;
+    padding: 30px;
+}
+.tresCajasCont a{
+    text-decoration: none;
+    color: #333;
+    padding: 14px 20px;
+    background-color: lightgray;
+}
+.tresCajasCont .dif{
+    color: gray;
+    margin-bottom: 50px;
+    text-align: left;
+}
+.horario{
+    border-bottom: 1px lightgray solid;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.tresCajasCont select{
+    padding: 15px 5px;
+    width: 200px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+}
+.tresCajasCont input[type="phone"]{
+    padding: 15px 5px;
+    width: 200px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+}
+.tresCajasCont input[type="email"]{
+    padding: 15px 5px;
+    width: 200px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+}
+.tresCajasCont input[type="submit"]{
+    padding: 15px 5px;
+    width: 200px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.tresCajasCont input[type="text"]{
+    padding: 15px 5px;
+    width: 200px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.tresCajasCont textarea{
+    padding: 15px 5px;
+    width: 400px;
+    height: 100px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.modalHorario{
+    position: absolute;
+    background-color: #333;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 50000;
+    display: none;
+}
+.modalHorarioImg{
+    position: absolute;
+    z-index: 50001;
+    width: 800px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    cursor: pointer;
+}
+.modalHorarioImg img{
+    width: 100%;
+}
+.iconoCerrarHorario{
+    position: absolute;
+    top: -2%;
+    left: 102%;
+    color: red;
+}
+.iconoCerrarHorario i{
+    font-size: 30px;
+}
+.videoResponsive{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.videoResponsive article{
+    width: 50%;
+}
+.videoResponsive .contRes{
+    float: right;
+    padding: 40px;
+}
+.videoResponsive .contVideo{
+    float: left;
+}
+.textosvideo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.iconosvideo{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 20px;
+}
+.contenedoryoutube{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.contenedoryoutube iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.contRes h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.contRes p{
+    color: gray;
+    margin-bottom: 20px;
+}
+.cuadritos{
+    margin-top: 500px;
+}
+.tituloC{
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+.cuadritos hr{
+    margin-bottom: 30px;
+}
+.cuadritosCont{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cuadritosContTxt{
+    width: 250px;
+    height: 250px;
+    border: 3px lightgray solid;
+    position: relative;
+    overflow: hidden;
+}
+.cuadros1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.cuadros1 i{
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #12b3f0;
+}
+.cuadros1 h1{
+    font-weight: lighter;
+    font-size: 30px;
+}
+.cuadritosContTxt:hover .cuadros1{
+    padding-bottom: 40px;
+    transition: all 0.3s;
+}
+.cuadritosContTxt:hover .cuadros1 h1{
+    color: white;
+    transition: all 0.3s;
+}
+.cuadrosUp{
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    clip-path: polygon(50% 50%, 0 100%, 0 0, 100% 0, 100% 100%);
+    position: absolute;
+    top: -104%;
+    left: 0;
+}
+.cuadritosContTxt:hover .cuadrosUp{
+    top: 0;
+    transition: all 0.5s;
+}
+.cuadrosDown{
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+    position: absolute;
+    bottom: -104%;
+    left: 0;
+}
+.cuadritosContTxt:hover .cuadrosDown{
+    bottom: 0;
+    transition: all 0.5s;
+}
+.docs hr{
+    margin-bottom: 30px;
+}
+.DocCont{
+    display: flex;
+}
+.docgrande{
+    display: flex;
+    width: 40%;
+}
+.docgrande figure{
+    width: 240px;
+    overflow: hidden;
+}
+.docgrande figure img{
+    transform: scale(1);
+    height: 100%;
+    transition: all .5s;
+}
+.docgrande figure img:hover{
+    transform: scale(1.2);
+}
+.txtblue{
+    color: #1ec2b4;
+}
+.docgrandeinfo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    width: 240px;
+    background-color: #f3f3f3;
+    gap: 10px;
+}
+.docchicoinfo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    width: 60%;
+}
+.quotation{
+    font-size: 60px;
+    color: lightgray;
+}
+.docgrandeinfo p{
+    color: gray;
+}
+.docchicoinfo p{
+    color: gray;
+}
+.txtphone i{
+    color: #12b3f0;
+}
+.docgrandeinfo hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.docchicoinfo hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.docgrandeinfo:hover{
+    color: white;
+    background-color: #1ec2b4;
+    transition: all 0.5s;
+}
+.docchicoinfo:hover{
+    color: white;
+    background-color: #1ec2b4;
+    transition: all 0.5s;
+}
+.docgrandeinfo:hover .txtblue{
+    color: white;
+    transition: all 0.5s;
+}
+.docchicoinfo:hover .txtblue{
+    color: white;
+    transition: all 0.5s;
+}
+.docgrandeinfo:hover p{
+    color: white;
+    transition: all 0.5s;
+}
+.docchicoinfo:hover p{
+    color: white;
+    transition: all 0.5s;
+}
+.DocChiquitos{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.chiquitos{
+    background-color: #f3f3f3;
+    width: 45%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+}
+.chiquitos figure{
+    overflow: hidden;
+}
+.chiquitos figure img{
+    transform: scale(1);
+    transition: all .5s;
+}
+.chiquitos figure img:hover{
+    transform: scale(1.2);
+}
+.imagenTs{
+    display: flex;
+    gap: 20px;
+}
+.imgFiltro .gris{
+    filter: grayscale(100%);
+    transform: scale(1);
+    transition: all .5s;
+}
+.imgFiltro .gris:hover{
+    transform: scale(1.02);
+    filter: grayscale(0%);
+}
+.personaTes{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.personaTes hr{
+    width: 50px;
+    height: 5px;
+    background-color: #12b3f0;
+    border: none;
+}
+.imgTes{
+    display: flex;
+    gap: 20px;
+}
+.imgTes img{
+    filter: blur(5px);
+    transform: scale(1);
+    transition: all .5s;
+}
+.imgTes img:hover{
+    filter: blur(0px);
+    transform: scale(1.3);
+    box-shadow: 0px 0px 7px #333;
+}
+.imgTes figure img{
+    border-radius: 50px;
+}
+.contTes{
+    padding-right: 20px
+}
+.contTes h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.contTes p{
+    color: gray;
+    margin-bottom: 20px;
+}
+footer{
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0px;
+}
+.contFooter{
+    width: 320px;
+}
+.contFooter h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.contFooter hr{
+    height: 2px;
+    background-color: #12b3f0;
+    border: none;
+    margin-bottom: 10px;
+}
+.contFooter i{
+    color: #12b3f0;
+}
+.gray{
+    color: gray;
+    transition: all 0.5s;
+}
+.gray:hover{
+    padding-left: 10px;
+}
+.contFooter a{
+    text-decoration: none;
+    color: gray;
+    transition: all 0.5s;
+}
+.contFooter a:hover{
+    padding-left: 10px;
+    color: #12b3f0;
+}
+.azul{
+    color: #12b3f0;
+}
+.contFooter p:hover{
+    color: #12b3f0;
+    transition: all 0.5s;
+}
+.redesiconoFooter{
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+.redesFooter{
+    display: flex;
+    gap: 20px;
+}
+.redesFooter i:hover{
+    color: #12b3f0;
+    transition: all 0.5s;
+}
+.parallax{
+    background-image: url(imagenes/parallax.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 250px;
+    position: relative;
+    margin-top: 40px;
+}
+.txtPara{
+    color: white;
+    font-size: 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 3px white  solid;
+    padding-bottom: 30px;
+}
+.galeria{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.galeria figure{
+    max-width: 220px;
+    height: 220px;
+    border: 5px white solid;
+    box-shadow: 0px 0px 10px #ccc;
+    overflow: hidden;
+}
+.galeria figure img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    filter: brightness(60%);
+    transition: all 0.5s;
+}
+.galeria figure img:hover{
+    filter: brightness(100%);
+}
+.contFancy{
+    width: 220px;
+}
+.tituloFancy{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.galeria a{
+    text-decoration: none;
+}
+.galeria h1{
+    color: #333;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.galeria hr{
+    background-color: #12b3f0;
+    width: 40px;
+    height: 5px;
+    border: none;
+}
+.galeria p{
+    color: gray;
+    font-size: 14px;
+}
+.tituloFancy:hover hr{
+    width: 60px;
+    transition: all 0.5s;
+}
+.tituloFancy:hover h1{
+    color: #12b3f0;
+    transition: all 0.5s;
+}
+.izquierda{
+    margin-top: 40px;
+    background-color: #1ec2b4;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+.izquierda h2 {
+    font-size:38px;
+    font-weight: normal;
+    color:white;
+    padding-bottom: 40px;
+    padding-left: 30px;
+}
+.acordeon{
+    padding: 15px;
+    border-top: 1px #F5F6FA solid;
+}
+.acordeon_titulo{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap:20px;
+    cursor: pointer;
+    position: relative;
+}
+.acordeon_titulo i{
+    padding: 3px;
+    font-size: 12px;
+    background:black;
+    color: white;
+    border-radius: 5px;
+  }
+
+.acordeon_titulo p {
+    font-size:20px;
+    font-family: Helvetica;
+    color:white;
+    width:75%;
+}
+
+.acordeon_contenido{
+    display: none;
+    padding: 25px 70px;
+    margin-left: 30px;
+}
+.acordeon_contenido p{
+    color: white;
+    line-height: 24px;
+}
+.mas1, .mas2, .mas3, .mas4, .mas5, .mas6, .mas7, .mas8{
+    z-index: 3;
+    position: absolute;
+    left: 7%;
+    top: 0;
+}
+.menos{
+    z-index: 1;
+    position: absolute;
+    left: 7%;
+    top: 0;
+}
+.desaparecer{
+    opacity: 0;
+}
+.formulario{
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    background-color: #f3f3f3;
+    width: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.formulario form{
+    margin-top: 40px;
+}
+.formulario p{
+    color: gray;
+    margin-top: 40px;
+}
+.formulario select{
+    padding: 15px 5px;
+    width: 250px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+}
+.formulario input[type="phone"]{
+    padding: 15px 5px;
+    width: 250px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+}
+.formulario input[type="email"]{
+    padding: 15px 5px;
+    width: 250px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+}
+.formulario input[type="submit"]{
+    padding: 15px 5px;
+    width: 250px;
+    border: 1px lightgray solid;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #1ec2b4;
+}
+.formulario input[type="submit"]:hover{
+    transition: all 0.5s;
+    background-color: #333;
+}
+.formulario input[type="text"]{
+    padding: 15px 5px;
+    width: 250px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.formulario textarea{
+    padding: 15px 5px;
+    width: 500px;
+    height: 100px;
+    border: 1px lightgray solid;
+    color: gray;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#slider1 { 
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; 
+    padding: 0 0 10px; 
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:stretch;
+}
+#slider1 .viewport { 
+    width: 1020px; 
+    height: 430px; 
+    overflow: hidden; 
+    position: relative; 
+}
+#slider1 .buttons {
+    display: block;
+    margin: 30px 10px 0 0;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 22px;
+}
+#slider1 .next {
+    margin: 30px 0 0 10px;
+}
+#slider1 .buttons:hover {
+    color: #12b3f0;
+    background: #fff;
+}
+#slider1 .disable { 
+    visibility: hidden; 
+}
+#slider1 .overview { 
+    list-style: none; 
+    position: absolute; 
+    padding: 0; 
+    margin: 0; 
+    width: 240px; 
+    left: 0; 
+    top: 0; 
+    display:flex; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+#slider1 .overview li { 
+    margin: 0 20px 0 0; 
+    padding: 10px; 
+    width: 300px; 
+    height: 350px; 
+    border: 1px solid #dcdcdc; 
+    background-color: white;
+    box-shadow: 0px 0px 10px #e5e5e5;
+    text-align: center;
+}
+#slider1 .overview li:hover { 
+   background-color: #1ec2b4;
+   transition: all 0.5s;
+   color: white;
+}
+#slider1 .overview li:hover p{ 
+    transition: all 0.5s;
+    color: white;
+ }
+ #slider1 .overview li:hover .btn_vermas{ 
+    transition: all 0.5s;
+    color: #1ec2b4;
+    background-color: white;
+ }
+#slider1 .overview li img{
+    object-fit: cover;
+    width: 250px;
+}
+#slider1 .overview li h2{
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+#slider1 .overview li p{
+    color: #1ec2b4;
+    margin-bottom: 10px;
+}
+#slider1 .overview li p{
+    color: #1ec2b4;
+    margin-bottom: 10px;
+}
+#slider1 .overview li hr{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #333;
+    border: 1px #333 solid;
+}
+.btn_vermas{
+    padding:10px 20px;
+    border-radius: 5px;
+    background-color: #1ec2b4;
+    color: white;
+    text-decoration: none;
+    display:inline-block;
+}
+.contenedor_flechas{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 430px; 
+}
+
+@media screen and (max-width: 396px){
+    header{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    .menuMovil{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+    .menuMovil i{
+        font-size: 30px;
+        color: black;
+    }
+    .contMenuM{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+    }
+    .desplegarMenuM{
+        position: absolute;
+        top: 80px;
+        right: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 20px;
+        width: 70%;
+        height: 100%;
+        box-shadow: 0px 0px 7px #333;
+        transition: all 1s;
+        z-index: 900;
+        background-color: white;
+    }
+    .desplegarMenuM a{
+        text-decoration: none;
+        color: black;
+        padding: 15px 0px 15px 20px;
+    }
+    .desplegarMenuM a:hover{
+        background-color: #1ec2b4;
+        color: white;
+    }
+    .abrirDesplegarMenuM{
+        left: 0;
+        display: flex;
+    }
+    .searchM{
+        position: absolute;
+        top: 150%;
+        left: -350%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 200px;
+        background-color: lightgray;
+        z-index: 22;
+        align-items: center;
+        padding: 15px 10px;
+        color: gray;
+        box-shadow: 0px 0px 7px #333;
+        transition: all 0.5s;
+        opacity: 0;
+    }
+    .searchM i{
+        font-size: 16px;
+    }
+    .searchM a{
+        text-decoration: none;
+    }
+    .abrirSearchM{
+        left: -300%;
+        opacity: 1;
+    }
+    .infoM{
+        position: absolute;
+        top: 160%;
+        left: -450%;
+        z-index: 23;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0px 0px 7px #333;
+        transition: all 0.5s;
+        opacity: 0;
+    }
+    .abrirInfoM{
+        left: -400%;
+        opacity: 1;
+    }
+    .cabeceraInfo{
+        flex-direction: column;
+    }
+    .cabeceraInfo p{
+        color: gray;
+        font-size: 14px;
+    }
+    .number{
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    .numberM{
+        display: flex;
+    }
+    .numberM i{
+        font-size: 16px;
+        color: #12b3f0;
+    }
+    .slide{
+        flex-direction: column;
+        align-items: center;
+    }
+    .callbacks_container{
+        order: 1;
+    }
+    .contSlide{
+        top: 40%;
+        left: 10%;
+        display: flex;
+    }
+    .contSlide p{
+        display: none;
+    }
+    .contSlide h1{
+        width: 300px;
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .contSlide a{
+        padding: 10px;
+        width: 250px;
+    }
+    .rslides li{
+        height: 100vh;
+        padding: 0px 20px;
+    }
+    .rslides img{
+        height: 100%;
+        object-fit: cover;
+        filter:contrast(40%);
+    }
+    .rslides li .imgM{
+        display: block;
+    }
+    .rslides li .imgD{
+        display: none;
+    }
+    .redes{
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        width: 300px;
+        position: relative;
+        order: 2;
+    }
+    .lineaVertical{
+        width: 300px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: -1;
+    }
+    .numerosSlide{
+        order: 3;
+        flex-direction: row;
+        margin-top: 20px;
+        gap: 30px;
+    }
+    .numerosSlide p{
+        padding-right: 0px;
+    }
+    .numerosSlide p:hover{
+        color: #1ec2b4;
+        padding-right: 0px;
+        border-bottom: 3px #1ec2b4 solid;
+    }
+    .tresCajas{
+        flex-direction: column;
+    }
+    .tresCajasCont{
+        width: 350px;
+    }
+    .modalHorarioImg{
+        width: 380px;
+    }
+    .modalHorarioImg img{
+        width: 100%;
+    }
+    .iconoCerrarHorario{
+        top: -10%;
+        left: 90%;
+    }
+    .iconoCerrarHorario i{
+        font-size: 30px;
+    }
+    .videoResponsive{
+        padding: 20px;
+    }
+    .videoResponsive article{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .videoResponsive .contRes{
+        float: none;
+        padding: 0px;
+    }
+    .videoResponsive .contVideo{
+        float: none;
+    }
+    .textosvideo{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .iconosvideo{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cuadritos{
+        margin-top: 0px;
+    }
+    .cuadritosCont{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .DocCont{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .docgrande{
+        width: 100%;
+    }
+    .DocChiquitos{
+        width: 100%;
+        gap: 15px;
+    }
+    .chiquitos{
+        width: 100%;
+    }
+    .docgrande{
+        margin-bottom: 20px;
+    }
+    .imagenTs{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .imgFiltro{
+        width: 100%;
+    }
+    .imgFiltro .gris{
+        width: 100%;
+    }
+    .imgTes{
+        gap: 10px;
+    }
+    footer{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .redesiconoFooter{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .parallax{
+        margin: 20px;
+    }
+    .acordeon_contenido{
+        padding: 25px 10px;
+    }
+    .formulario{
+        width: 350px;
+    }
+    .formulario textarea{
+        width: 250px;
+    }
+    #slider1 .viewport { 
+        width:290px;
+    }
+    #slider1 .overview li { 
+        width: 265px; 
+        }
+    #slider1 .overview li img{
+        width: 240px;
+    }
+    .txtPara{
+        line-height: 60px;
+        text-align: center;
+    }
+}
